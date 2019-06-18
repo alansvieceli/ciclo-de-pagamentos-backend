@@ -1,10 +1,11 @@
 {
-  "name": "backend",
+  "name": "ciclo-de-pagamentos-backend",
   "version": "1.0.0",
   "description": "Ciclo de pagamentos - backend",
-  "main": "index.js",
+  "main": "src/loader.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name ciclo-de-pagamentos-backend"
   },
   "repository": {
     "type": "git",
