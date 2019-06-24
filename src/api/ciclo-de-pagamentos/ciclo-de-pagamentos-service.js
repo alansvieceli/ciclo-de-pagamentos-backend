@@ -1,7 +1,13 @@
 const CicloPagamento = require('./ciclo-de-pagamentos');
+const errorHandler = require("../common/errorHandler");
 
 CicloPagamento.methods(['get', 'post', 'put', 'delete']);
 CicloPagamento.updateOptions({new: true, runValidators: true});
+
+//interceptar depois, aplicar o midleware
+CicloPagamento
+    .after("post", errorHandler)
+    .after("put", errorHandler);
 
 CicloPagamento.route('count', (req, res, next) => {
     CicloPagamento.count((error, value) => {
