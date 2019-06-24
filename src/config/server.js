@@ -1,5 +1,7 @@
 const port = 3003
 
+const allowCors = require("./cors");
+
 //Parser do corpo da requisição, Formulario, JSON, XML
 const bodyParser = require("body-parser");
 //Servidor web que roda em cima do node
@@ -8,6 +10,7 @@ const server = express();
 
 server.use(bodyParser.urlencoded({extended: true})); //formulario
 server.use(bodyParser.json());
+server.use(allowCors);
 
 server.listen(port, function(){
     console.log(`BACKEND está rodando na porta ${port}, quiridu!!`)
