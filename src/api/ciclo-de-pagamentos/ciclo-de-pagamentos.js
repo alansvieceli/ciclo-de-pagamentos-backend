@@ -21,8 +21,8 @@ const cicloPagamentoSchema = new mongoose.Schema({
     nome: {type: String, required: true},
     mes: {type: Number, min: 1, max: 12, required: true},
     ano: {type: Number, min: 1970, max: 2100, required: true},
-    credito: [creditoSchema],
-    debito: [debitoSchema]
+    creditos: [creditoSchema],
+    debitos: [debitoSchema]
 })
 
 module.exports = restfull.model("ciclo-de-pagamentos", cicloPagamentoSchema)
