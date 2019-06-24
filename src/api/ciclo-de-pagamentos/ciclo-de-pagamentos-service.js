@@ -9,6 +9,7 @@ CicloPagamento
     .after("post", errorHandler)
     .after("put", errorHandler);
 
+//http://localhost:3003/api/ciclo-de-pagamentos/count
 CicloPagamento.route('count', (req, res, next) => {
     CicloPagamento.count((error, value) => {
         if (error){
@@ -19,6 +20,7 @@ CicloPagamento.route('count', (req, res, next) => {
     });
 });
 
+//http://localhost:3003/api/ciclo-de-pagamentos/sumario
 CicloPagamento.route('sumario', (req, res, next) => {
     CicloPagamento.aggregate([{
         $project: { credito: {$sum: "$creditos.valor"}, debito: {$sum: "$debitos.valor"}}
