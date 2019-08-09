@@ -52,3 +52,14 @@ debito[1][valor]:180.44
 debito[1][situacao]:AGENDADO
 
 DELETE http://localhost:3003/api/ciclo-de-pagamentos/5d0ad4c2a4fd9043b06c2aef
+
+
+-----------------------------
+heroku
+-----------------------------
+
+npm install -g heroku-cli
+
+heroku --version
+
+https://github.com/cod3rcursos/deploy-heroku-backend
