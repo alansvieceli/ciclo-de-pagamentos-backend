@@ -1,4 +1,4 @@
-const port = 3003
+const port = 80
 
 const allowCors = require("./cors");
 const queryParser = require("express-query-int");
