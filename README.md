@@ -63,3 +63,5 @@ npm install -g heroku-cli
 heroku --version
 
 https://github.com/cod3rcursos/deploy-heroku-backend
+
+criar 2 variaveis de ambiente
