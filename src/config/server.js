@@ -1,4 +1,4 @@
-const port = 80
+const port = process.env.PORT || 3003;
 
 const allowCors = require("./cors");
 const queryParser = require("express-query-int");
