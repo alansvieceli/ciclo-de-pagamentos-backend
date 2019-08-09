@@ -28,7 +28,7 @@ CicloPagamento.route('sumario', (req, res, next) => {
         $group: {_id: null, credito: {$sum: "$credito"}, debito: {$sum: "$debito"}}
     }, {
         $project: {_id: 0, credito: 1, debito: 1}
-    }], (error, result) => {
+    }]).exec((error, result) => {
         if (error){
             res.status(500).json({errors: [error]});
         } else {
